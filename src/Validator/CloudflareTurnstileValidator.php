@@ -11,11 +11,20 @@ use Symfony\Component\Validator\ConstraintValidator;
 
 final class CloudflareTurnstileValidator extends ConstraintValidator
 {
-    private bool $enable;
+    /**
+     * @var bool
+     */
+    private $enable;
 
-    private RequestStack $requestStack;
+    /**
+     * @var RequestStack
+     */
+    private $requestStack;
 
-    private CloudflareTurnstileHttpClient $turnstileHttpClient;
+    /**
+     * @var CloudflareTurnstileHttpClient
+     */
+    private $turnstileHttpClient;
 
     public function __construct(
         bool $enable,
