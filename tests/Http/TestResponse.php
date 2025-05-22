@@ -9,9 +9,15 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class TestResponse implements ResponseInterface
 {
-    private string $content;
+    /**
+     * @var string
+     */
+    private $content;
 
-    private array $contentAsArray;
+    /**
+     * @var array
+     */
+    private $contentAsArray;
 
     public function __construct(array $contentAsArray = [], string $content = '')
     {
@@ -39,7 +45,7 @@ final class TestResponse implements ResponseInterface
         // do nothing
     }
 
-    public function getInfo(?string $type = null): mixed
+    public function getInfo(?string $type = null)
     {
         return [];
     }
