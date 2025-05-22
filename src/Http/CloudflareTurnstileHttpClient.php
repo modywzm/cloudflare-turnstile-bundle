@@ -13,11 +13,20 @@ final class CloudflareTurnstileHttpClient
 {
     private const SITEVERIFY_ENDPOINT = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 
-    private HttpClientInterface $httpClient;
+    /**
+     * @var HttpClientInterface
+     */
+    private $httpClient;
 
-    private string $secret;
+    /**
+     * @var string
+     */
+    private $secret;
 
-    private LoggerInterface $logger;
+    /**
+     * @var LoggerInterface
+     */
+    private $logger;
 
     public function __construct(string $secret, HttpClientInterface $httpClient, LoggerInterface $logger)
     {
