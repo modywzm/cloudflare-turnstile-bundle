@@ -1,5 +1,5 @@
 {
-  "name": "pixelopen/cloudflare-turnstile-bundle",
+  "name": "modywzm/cloudflare-turnstile-bundle",
   "description": "A simple package to help integrate Cloudflare Turnstile on Symfony.",
   "keywords": [
     "symfony bundle",
